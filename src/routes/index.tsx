@@ -193,7 +193,7 @@ function Index() {
       }
 
       const footerRect = footerEl.getBoundingClientRect();
-      const revealThreshold = window.innerHeight + 200;
+      const revealThreshold = window.innerHeight + 360;
       setShowBackTop(footerRect.top <= revealThreshold);
     };
 
@@ -683,14 +683,29 @@ function Index() {
         </div>
       </section>
 
-      <footer ref={footerRef} className="bg-deep border-t border-deep-foreground/10 py-12 text-deep-foreground">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm opacity-60 md:flex-row">
-          <span className="flex items-center gap-3 font-serif text-xl">
+      <footer
+        ref={footerRef}
+        className="bg-deep border-t border-deep-foreground/10 py-12 text-deep-foreground"
+      >
+        <div className="mx-auto grid max-w-7xl items-center gap-4 px-6 text-sm opacity-60 md:grid-cols-3">
+          <span className="flex items-center justify-center gap-3 font-serif text-xl md:justify-self-start">
             <span className="nav-flame" aria-hidden="true" />
             Solemn Home
           </span>
-          <span>© 2026 Solemn Home. All rights reserved.</span>
-          <span>Portfolio concept, all names and details are sample content.</span>
+          <span className="text-center">
+            Developed by{" "}
+            <a
+              href="https://ampdirect.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:opacity-80"
+            >
+              AMP Direct
+            </a>
+          </span>
+          <span className="text-center md:justify-self-end">
+            © 2026 Solemn Home. All rights reserved.
+          </span>
         </div>
       </footer>
     </div>
